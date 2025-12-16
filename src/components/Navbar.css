@@ -1,0 +1,72 @@
+/* Header */
+.app-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.home-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.logo {
+    height: 6rem;
+    width: auto;
+}
+
+.home-link:hover {
+    opacity: 0.7;
+}
+
+.today-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.today-link:hover {
+    opacity: 0.7;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height: 3rem;
+    }
+
+    .app-header {
+        padding: 1rem;
+    }
+
+    .today-link {
+        font-size: 0.9rem;
+    }
+}

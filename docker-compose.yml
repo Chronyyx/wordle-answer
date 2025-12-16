@@ -1,0 +1,15 @@
+
+
+services:
+  backend:
+    build: ./server
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./server:/app
+      - ./dist:/dist
+      - /app/node_modules
+    restart: unless-stopped
+
+volumes:
+  wordle-data:
